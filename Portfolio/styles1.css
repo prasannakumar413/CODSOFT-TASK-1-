@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #0e0d0d;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+.navbar .logo a {
+    color: #d11579;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: #f52b8d;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 25px;
+    
+}
+
+.navbar .menu li a {
+    color: #f2efef;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.navbar.sticky {
+    background: #0d0d0d;
+    padding: 10px 40px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: url('https://www.optimalvirtualemployee.com/wp-content/uploads/2022/12/Web-Developer-skill.jpg') no-repeat center center/cover;
+    color: #040202;
+}
+
+.home .home-content {
+    text-align: center;
+}
+
+.home .text-1, .home .text-2, .home .text-3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.home .text-2 {
+    font-size: 4rem;
+}
+
+.home .text-3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home .text-3 span {
+    color: #f52b8d;
+}
+
+.home a {
+    display: inline-block;
+    background: #f52b8d;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 2rem;
+    border-radius: 6px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.home a:hover {
+    background: #e41d78;
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.about .about-content .column {
+    flex: 48%;
+}
+
+.about .about-content .column.left img {
+    
+    width: 350px; /* Set the desired width */
+    height: 400px; /* Set the desired height */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; 
+}
+
+.about .about-content .column.right .text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-right: 10px;
+    margin-top: 50px;
+    color: #f4efef;
+}
+
+.about .about-content .column.right p {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #f4efef;
+}
+
+.about .about-content .column.right a {
+    display: inline-block;
+    background: #f52b8d;
+    color: #fff;
+    padding: 10px 35px;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.about .about-content .column.right a:hover {
+    background: #e41d78;
+}
+
+.services .serv-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services .serv-content .box {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background: #4c4b4b;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    color: #f1eded;
+    border-radius: 60px;
+    transition: transform 0.3s;
+}
+
+.services .serv-content .box:hover {
+    transform: translateY(-10px);
+}
+
+.services .serv-content .box i {
+    font-size: 5rem;
+    color: #f52b8d;
+    margin-bottom: 10px;
+}
+.section:nth-child(odd) {
+    background-color: #282828; /* Light background color */
+}
+
+.section:nth-child(even) {
+    background-color: #1c1c1d; /* Darker background color */
+}
+
+.services .serv-content .box h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #010101;
+    margin-right: 0px;
+}
+
+.services .serv-content .box p {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #f1f0f0;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.skills .skills-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills .skills-content .box {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background: #535252;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 60px;
+    transition: transform 0.3s;
+}
+
+.skills .skills-content .box:hover {
+    transform: translateY(-10px);
+}
+
+.skills .skills-content .box h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #0e0d0d;
+}
+
+.skills .skills-content .box p {
+    font-size: 1.6rem;
+    color: #f3f1f1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.projects .projects-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.projects .projects-content .box {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    background: #515050;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 60px;
+    transition: transform 0.3s;
+}
+
+.projects .projects-content .box:hover {
+    transform: translateY(-10px);
+}
+
+.projects .projects-content .box h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #090909;
+}
+
+.projects .projects-content .box p {
+    font-size: 1.6rem;
+    color: #fefbfb;
+}
+
+.projects .projects-content .box img {
+    width: 100%; /* Make the image take the full width of the box */
+    height: auto; /* Keep the aspect ratio */
+    margin: 15px 0; /* Add some margin around the image */
+    border-radius: 6px; /* Optional: add some border-radius to match the box */
+}
+
+
+.contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .contact-content .column {
+    flex: 48%;
+}
+
+.contact .contact-content .column.left .text,
+.contact .contact-content .column.right .text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact .contact-content .column.left .row {
+    display: flex;
+    margin-top: 20px;
+}
+
+.contact .contact-content .column.left .row i {
+    font-size: 2.5rem;
+    color: #f52b8d;
+    margin-right: 20px;
+}
+
+.contact .contact-content .column.left .row .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .contact-content .column.left .row .info .head {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color:#f52b8d;
+}
+
+.contact .contact-content .column.left .row .info .sub-title {
+    font-size: 1.6rem;
+    color: #666;
+}
+
+.contact .contact-content .column.right form .fields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .contact-content .column.right form .field {
+    width: 48%;
+    margin-bottom: 15px;
+}
+
+.contact .contact-content .column.right form .field textarea {
+    width: 100%;
+    resize: none;
+}
+
+.contact .contact-content .column.right form .field input,
+.contact .contact-content .column.right form .field textarea {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.contact .contact-content .column.right form .button-area {
+    text-align: right;
+}
+
+.contact .contact-content .column.right form .button-area button {
+    background: #f52b8d;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1.8rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.contact .contact-content .column.right form .button-area button:hover {
+    background: #e41d78;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer span {
+    font-size: 1.6rem;
+}
+
+footer a {
+    color: #f52b8d;
+}
